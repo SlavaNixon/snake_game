@@ -1,11 +1,11 @@
 function allMove()
-  for i=eated ,2,-1 do
-      snake[i].x=snake[i-1].x
-      snake[i].y=snake[i-1].y
+  for i=eated, 2, -1 do
+      snake[i].x = snake[i-1].x
+      snake[i].y = snake[i-1].y
     end
-    if snake[1]~= nil then
-      snake[1].x=snake['head'].x
-      snake[1].y=snake['head'].y
+    if (snake[1] ~= nil) then
+      snake[1].x = snake['head'].x
+      snake[1].y = snake['head'].y
     end
 end
 
@@ -34,14 +34,14 @@ function joysteak(keyPress)
     num = 30
   else
     allMove()
-    snake.head[str]=snake.head[str]+num
+    snake.head[str] = snake.head[str]+num
   end
 end
 
 function keyPause(keyPress)
-  if keyPress == nil then
-    love.graphics.print('To start press any key',200,200)
-    love.graphics.print('version 1.1',500,580)
+  if (keyPress == nil) then
+    love.graphics.print('To start press any key', 200, 200)
+    love.graphics.print('version 1.1', 500, 580)
     end
   end
   
@@ -49,8 +49,8 @@ function keyPause(keyPress)
     num = 0
   end
   function checkBackMove(int,string,nochange)
-    for i=1,eated do
-      if snake.head[string]+int==snake[i][string] and snake.head[nochange] ==snake[i][nochange] then
+    for i=1, eated do
+      if (snake.head[string] + int == snake[i][string]) and (snake.head[nochange] == snake[i][nochange]) then
         return false
       end
     end
